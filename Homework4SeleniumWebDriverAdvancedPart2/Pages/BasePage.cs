@@ -15,7 +15,6 @@ namespace Homework4SeleniumWebDriverAdvancedPart2.Pages
             _driver = driver;
             _wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(5));
         }
-
         public IWebDriver Driver => _driver;
         public WebDriverWait Wait => _wait;
         
