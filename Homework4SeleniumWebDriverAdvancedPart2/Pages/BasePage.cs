@@ -9,7 +9,7 @@ namespace Homework4SeleniumWebDriverAdvancedPart2.Pages
     {
         private ChromeDriver _driver;
         private WebDriverWait _wait;
-
+        
         public BasePage(ChromeDriver driver)
         {
             _driver = driver;
