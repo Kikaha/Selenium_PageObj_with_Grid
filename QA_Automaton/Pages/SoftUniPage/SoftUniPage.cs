@@ -11,7 +11,7 @@ namespace QA_Automaton.Pages
     public class SoftUniPage:BasePage
     {
         private string text;
-        public SoftUniPage(ChromeDriver driver):base(driver)
+        public SoftUniPage(IWebDriver driver):base(driver)
         {
         }
 

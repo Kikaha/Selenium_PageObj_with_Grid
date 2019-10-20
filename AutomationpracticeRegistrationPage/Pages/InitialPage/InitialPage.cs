@@ -8,7 +8,7 @@ namespace AutomationpracticeRegistrationPage.Pages
 {
     public class InitialPage:BasePage
     {
-        public InitialPage(ChromeDriver driver):base(driver)
+        public InitialPage(IWebDriver driver):base(driver)
         {
         }
 

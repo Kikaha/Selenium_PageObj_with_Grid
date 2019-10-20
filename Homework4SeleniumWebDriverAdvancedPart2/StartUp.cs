@@ -3,6 +3,7 @@ using Homework4SeleniumWebDriverAdvancedPart2.Pages;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.IO;
@@ -14,7 +15,7 @@ namespace Homework4SeleniumWebDriverAdvancedPart2
     [TestFixture]
     public class Class1
     {
-        private ChromeDriver _driver;
+        private IWebDriver _driver;
         private UserProperty _user;
         private LoginPage _loginPage;
         private RegistrationPage _regPage;
@@ -22,7 +23,13 @@ namespace Homework4SeleniumWebDriverAdvancedPart2
         [SetUp]
         public void TestInit()
         {
-            _driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
+            ChromeOptions options = new ChromeOptions();
+            options.PlatformName = "windows";
+            options.BrowserVersion = "77.0";
+
+            _driver = new RemoteWebDriver(new Uri("http://192.168.254.1:18415/wd/hub"), options.ToCapabilities(), TimeSpan.FromSeconds(10));
+            _driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(30);
+            //_driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
             _driver.Manage().Window.Maximize();
             _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
             _user = Factory.CreateUser();

@@ -10,16 +10,16 @@ namespace QA_Automaton.Pages
     public abstract class BasePage
     {
 
-        private ChromeDriver _driver;
+        private IWebDriver _driver;
         private WebDriverWait _wait;
 
-        public BasePage(ChromeDriver driver)
+        public BasePage(IWebDriver driver)
         {
             _driver = driver;
             _wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(3));
         }
 
-        public ChromeDriver Driver => _driver;
+        public IWebDriver Driver => _driver;
 
         public WebDriverWait Wait => _wait;
 

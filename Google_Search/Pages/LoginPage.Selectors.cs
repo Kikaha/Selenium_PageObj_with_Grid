@@ -9,10 +9,10 @@ namespace Google_Search.Pages
 {
     public partial class LoginPage
     {
-        private ChromeDriver _driver;
+        private IWebDriver _driver;
         private WebDriverWait _wait;
 
-        public LoginPage(ChromeDriver driver)
+        public LoginPage(IWebDriver driver)
         {
             _driver = driver;
             _wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(3));

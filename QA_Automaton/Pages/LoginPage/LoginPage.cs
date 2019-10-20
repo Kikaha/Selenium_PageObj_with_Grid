@@ -8,7 +8,7 @@ namespace QA_Automaton.Pages
 {
     public class LoginPage:BasePage
     {
-        public LoginPage(ChromeDriver driver) : base(driver)
+        public LoginPage(IWebDriver driver) : base(driver)
         {
         }
 

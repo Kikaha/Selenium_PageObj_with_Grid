@@ -11,7 +11,7 @@ namespace Homework4SeleniumWebDriverAdvancedPart2.Pages
     public partial class RegistrationPage:BasePage
     {
 
-        public RegistrationPage(ChromeDriver driver):base(driver)
+        public RegistrationPage(IWebDriver driver):base(driver)
         {
         }
         public IList<IWebElement> Radiobuttons => Wait.Until(x => x.FindElements(By.ClassName("radio-inline")));

@@ -7,7 +7,7 @@ namespace Homework4SeleniumWebDriverAdvancedPart2.Pages
     public class LoginPage:BasePage
     {
 
-        public LoginPage(ChromeDriver driver):base(driver)
+        public LoginPage(IWebDriver driver):base(driver)
         {
             //_driver = driver;
             //_driver.Url = "http://automationpractice.com/index.php?controller=authentication&back=my-account";

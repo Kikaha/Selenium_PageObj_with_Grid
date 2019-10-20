@@ -8,7 +8,7 @@ namespace AutomationpracticeRegistrationPage.Pages
 {
     public partial class LoginPage:BasePage
     {
-        public LoginPage(ChromeDriver driver):base(driver)
+        public LoginPage(IWebDriver driver):base(driver)
         {
         }
         public IWebElement inputField => Driver.FindElement(By.Id("email_create"));
